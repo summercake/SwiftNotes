@@ -170,7 +170,7 @@ if strA.isEmpty { // to get info about whether string is empty 	or not
 } else {
     print( "strA is not empty" );
 }
-var count = strA.count; // get the length of string
+var count = strA.characters.count; // get the length of string
 var newStrA = strA.utf8; // get utf8 encoding
 var unicode = strA.unicodeScalars; //get unicode
 "abc" == "abcd" ? true : false; // to know whether two string is same

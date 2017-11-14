@@ -13,13 +13,13 @@ if strA.isEmpty { // to get info about whether string is empty     or not
 } else {
     print( "strA is not empty" );
 }
-var count = strA.count; // get the length of string
+var count = strA.characters.count; // get the length of string
 var newStrA = strA.utf8; // get utf8 encoding
 var unicode = strA.unicodeScalars; //get unicode
 "abc" == "abcd" ? true : false; // to know whether two string is same
 var combinStr = "Hello" + " " + "Beautie"; // connect two strings
 var bigStr = "\(combinStr) \(strA)"; // insert string to others
-for c in strA{ // get all letters in string
+for c in strA.characters{ // get all letters in string
     print(c)
 }
 
@@ -30,9 +30,9 @@ String(format : "%d%d", arguments : [min, sec])
 
 // substring
 let urlString = "www.google.com"
-let header = (urlString as NSString).substring(to: 3)
-//let middle = (urlString as NSString).substringWithRange(NSMakeRange(4, 5))
-//let footer = (urlString as NSString).substringFromIndex(from: Int)
+let header = (urlString as NSString).substringToIndex(3)
+let middle = (urlString as NSString).substringWithRange(NSMakeRange(4, 5))
+let footer = (urlString as NSString).substringFromIndex(10)
 
 
 
